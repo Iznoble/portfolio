@@ -1,0 +1,33 @@
+.information {
+  width: 471px;
+  height: 479px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  > h2 {
+    font-size: 90px;
+    font-weight: 700;
+    margin: 0;
+  }
+  > .symbols {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+}
+
+.personal-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 647px;
+  width: 593px;
+  background-image: url(./../../../assets/img/Group\ 2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  > img {
+    width: 500px;
+    height: 600px;
+  }
+}

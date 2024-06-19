@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { LandingpageComponent } from './landingpage/landingpage.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [LandingpageComponent],
+  imports: [LandingpageComponent, AboutMeComponent,SkillsComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })
