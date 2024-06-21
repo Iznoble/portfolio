@@ -1,0 +1,25 @@
+<app-headline></app-headline>
+<img class="shadow" src="./../../../assets/img/green_shadow.png" />
+
+<div class="projects">
+  @for (codeProject of projectArray.hoverInfo; track codeProject.coverImg) {
+
+  <div [ngClass]="cover" (mouseenter)="hideCover()">
+    <img src="./../../../assets/img/{{ codeProject.coverImg }}" />
+  </div>
+
+  <div [ngClass]="hide" (mouseleave)="hideInfo()">
+    <div class="link-btn">
+      <button class="git-btn">Github</button>
+      <button style="background-color: #4b47ff">Live test</button>
+    </div>
+    <div class="info-text">
+      <b>{{ codeProject.title }}</b>
+      <span>{{ codeProject.description }}</span>
+      <p>{{ codeProject.usedLanguage }}</p>
+    </div>
+  </div>
+  }
+</div>
+
+
