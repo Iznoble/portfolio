@@ -2,24 +2,20 @@
 <img class="shadow" src="./../../../assets/img/green_shadow.png" />
 
 <div class="projects">
-  @for (codeProject of projectArray.hoverInfo; track codeProject.coverImg) {
-
-  <div [ngClass]="cover" (mouseenter)="hideCover()">
-    <img src="./../../../assets/img/{{ codeProject.coverImg }}" />
-  </div>
-
-  <div [ngClass]="hide" (mouseleave)="hideInfo()">
-    <div class="link-btn">
-      <button class="git-btn">Github</button>
-      <button style="background-color: #4b47ff">Live test</button>
+  <div *ngFor="let codeProject of projectArray.hoverInfo">
+    <div [ngClass]="cover" (mouseenter)="codeProject.showInfo = true" (mouseleave)="codeProject.showInfo = false">
+      <img src="./../../../assets/img/{{ codeProject.coverImg }}" />
+      <div *ngIf="codeProject.showInfo" [ngClass]="'hover-info'">
+        <div class="link-btn">
+          <a href="{{ codeProject.gitRepositories }}" target="_blank"><button class="git-btn">Github</button></a>
+          <a href="{{ codeProject.liveTest }}" target="_blank"><button style="background-color: #4b47ff">Live test</button></a>
+        </div>
+        <div class="info-text">
+          <b>{{ codeProject.title }}</b>
+          <span>{{ codeProject.description }}</span>
+          <p>{{ codeProject.usedLanguage }}</p>
+        </div>
+      </div>
     </div>
-    <div class="info-text">
-      <b>{{ codeProject.title }}</b>
-      <span>{{ codeProject.description }}</span>
-      <p>{{ codeProject.usedLanguage }}</p>
-    </div>
   </div>
-  }
 </div>
-
-

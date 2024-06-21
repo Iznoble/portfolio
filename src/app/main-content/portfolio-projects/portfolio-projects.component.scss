@@ -23,7 +23,7 @@
 }
 
 .d-none {
-  display: none;
+  z-index: -1;
 }
 
 .hover-info {

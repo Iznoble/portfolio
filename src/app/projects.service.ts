@@ -10,6 +10,7 @@ export class ProjectsService {
   hoverInfo = [
     {
       coverImg: 'join_cover.png',
+      showInfo: false,
       bgImage: 'join.png',
       gitRepositories: 'https://github.com/Pascalina1985/join774.git',
       liveTest: 'https://denis-kusmitschev.com/join774/log-in.html',
@@ -20,6 +21,7 @@ export class ProjectsService {
     },
     {
       coverImg: 'Pollo loco 1.png',
+      showInfo: false,
       bgImage: 'Pollo loco 1.png',
       gitRepositories: 'https://github.com/Iznoble/El-pollo-loko.git',
       liveTest: 'https://denis-kusmitschev.com/Games/index.html',

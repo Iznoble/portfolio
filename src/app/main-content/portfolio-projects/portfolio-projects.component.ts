@@ -17,13 +17,4 @@ export class PortfolioProjectsComponent {
   info:string = 'hover-info';
   hide:string = 'd-none';
 
-  hideCover() {
-    this.cover = this.hide;
-    this.hide = this.info;
-  }
-
-  hideInfo() {
-    this.info = this.hide;
-    this.hide = this.cover;
-  }
 }
