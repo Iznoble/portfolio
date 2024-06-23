@@ -22,7 +22,7 @@ export class ProjectsService {
     {
       coverImg: 'Pollo loco 1.png',
       showInfo: false,
-      bgImage: 'Pollo loco 1.png',
+      bgImage: 'startscreen_1.png',
       gitRepositories: 'https://github.com/Iznoble/El-pollo-loko.git',
       liveTest: 'https://denis-kusmitschev.com/Games/index.html',
       title: 'Ell Pollo Loco',

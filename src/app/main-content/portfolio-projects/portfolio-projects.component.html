@@ -3,9 +3,10 @@
 
 <div class="projects">
   <div *ngFor="let codeProject of projectArray.hoverInfo">
-    <div [ngClass]="cover" (mouseenter)="codeProject.showInfo = true" (mouseleave)="codeProject.showInfo = false">
+    <div [ngClass]="{'project': true, 'hovered': codeProject.showInfo}" (mouseenter)="codeProject.showInfo = true" (mouseleave)="codeProject.showInfo = false">
       <img src="./../../../assets/img/{{ codeProject.coverImg }}" />
-      <div *ngIf="codeProject.showInfo" [ngClass]="'hover-info'">
+      <div *ngIf="codeProject.showInfo" [ngClass]="info">
+        <img src="./../../../assets/img/{{ codeProject.bgImage}}">
         <div class="link-btn">
           <a href="{{ codeProject.gitRepositories }}" target="_blank"><button class="git-btn">Github</button></a>
           <a href="{{ codeProject.liveTest }}" target="_blank"><button style="background-color: #4b47ff">Live test</button></a>
