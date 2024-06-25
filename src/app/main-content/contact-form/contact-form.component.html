@@ -1,1 +1,31 @@
 <app-contact-headline></app-contact-headline>
+<div class="spacing-contact">
+  <div class="problem-text">
+    <div class="headline">
+      <img src="./../../../assets/img/icons/green_line.png" />
+      <h2>Got a problem to solve?</h2>
+    </div>
+    <span
+      >Contact me through this form, I am interested in hearing from you,
+      knowing your ideas and contributing to your projects with my work.</span
+    >
+    <p>Need a Frontend developer? <b>Contact me!</b></p>
+  </div>
+
+  <form class="form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <input [(ngModel)]="contactData.name" type="text" name="name" required />
+    <input [(ngModel)]="contactData.email" type="email" name="email" required/>
+    <textarea [(ngModel)]="contactData.message" name="message" required></textarea>
+    <div>
+      <input class="checkbox" type="checkbox" required/>
+      <label
+        >I've read the <a href="">privacy policy </a>and agree to the processing
+        of my data as outlined.</label
+      >
+    </div>
+    <button>Send message :)</button>
+  </form>
+</div>
+<div class="playcing">
+  <img class="up-btn" src="./../../../assets/img/icons/Go up button.png" />
+</div>
