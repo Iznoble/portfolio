@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 430px;
 }
 
 .landingpage {
@@ -15,10 +16,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(./../../../assets/img/Purple\ shadow.png),
-    url(./../../../assets/img/green.png);
-  background-position: -240px 100px, right;
-  background-repeat: no-repeat, no-repeat;
+  > .left {
+    position: absolute;
+    top: 100px;
+    left: -240px;
+    width: 572px;
+    height: 608px;
+    z-index: -1;
+  }
+  > .right {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 270px;
+    height: 573px;
+    z-index: -1;
+  }
   > .talk-btn {
     > button {
       padding: 15px 30px 15px 30px;
@@ -29,8 +42,8 @@
       margin-top: 50px;
       cursor: pointer;
       &:hover {
-        padding: 20px 40px 20px 40px;
-        background-color: #4B47FF;
+        padding: 20px 30px 15px 35px;
+        background-color: #4b47ff;
       }
     }
   }
@@ -43,15 +56,17 @@
   justify-content: center;
   align-items: center;
   > .i-am {
-    width: 200px;
-    height: 108px;
-    font-size: 83px;
-    font-weight: 400;
+    width: fit-content;
+    height: fit-content;
     transform: rotate(-90deg);
+    > span {
+      font-size: 80px;
+      font-weight: 400;
+    }
   }
-  > .name {
+  > .name-spacing {
     width: 882px;
-    height: 224px;
+    height: fit-content;
     gap: 6px;
     > span {
       font-size: 90px;
@@ -71,4 +86,155 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 1090px) {
+  .header {
+    gap: 200px;
+  }
+
+  .headline .i-am {
+    width: 130px;
+    > span {
+      font-size: 56px;
+    }
+  }
+
+  .headline .name-spacing {
+    width: 700px;
+    > span {
+      font-size: 64px;
+    }
+    > p {
+      font-size: 40px;
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .headline .i-am {
+    width: 130px;
+    > span {
+      font-size: 48px;
+    }
+  }
+
+  .headline .name-spacing {
+    width: 700px;
+    > span {
+      font-size: 56px;
+    }
+    > p {
+      font-size: 32px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    gap: 0;
+  }
+
+  .landingpage {
+    > .left {
+      top: 140px;
+      left: -80px;
+      width: 272px;
+      height: 290px;
+    }
+    > .right {
+      top: 270px;
+      width: 140px;
+      height: 274px;
+    }
+  }
+
+  .headline .i-am {
+    width: 97px;
+    > span {
+      font-size: 40px;
+    }
+  }
+
+  .headline .name-spacing {
+    width: 460px;
+    > span {
+      font-size: 48px;
+    }
+    > p {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .headline .i-am {
+    width: 76px;
+    > span {
+      font-size: 32px;
+    }
+  }
+
+  .headline .name-spacing {
+    width: 410px;
+    > span {
+      font-size: 40px;
+    }
+    > p {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .headline .i-am {
+    width: 60px;
+    > span {
+      font-size: 24px;
+    }
+  }
+
+  .headline .name-spacing {
+    width: 320px;
+    > span {
+      font-size: 30px;
+    }
+    > p {
+      font-size: 16px;
+    }
+  }
+
+  .landingpage .talk-btn {
+    > button {
+      margin-top: 0;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+
+  .landingpage .left {
+    top: 190px;
+    left: -80px;
+    width: 230px;
+    height: 250px;
+  }
+
+  .headline .i-am {
+    width: 39px;
+    > span {
+      font-size: 16px;
+    }
+  }
+
+  .headline .name-spacing {
+    width: 230px;
+    > span {
+      font-size: 20px;
+    }
+    > p {
+      font-size: 16px;
+    }
+  }
 }

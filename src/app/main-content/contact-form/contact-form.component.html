@@ -15,7 +15,7 @@
   <form class="form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <input [(ngModel)]="contactData.name" type="text" name="name" required />
     <input [(ngModel)]="contactData.email" type="email" name="email" required/>
-    <textarea [(ngModel)]="contactData.message" name="message" required></textarea>
+    <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" required></textarea>
     <div>
       <input class="checkbox" type="checkbox" required/>
       <label

@@ -1,8 +1,32 @@
-<div>
-    <span>Denis</span>
-</div>
-<div class="links">
+<div ngClass="{{ head }}">
+  <div>
+    <span>D<b>e</b>nis</span>
+  </div>
+  <div class="links">
     <a href="">About me</a>
     <a href="">Skills</a>
     <a href="">Portfolio</a>
+  </div>
+
+  <div>
+    <button (click)="showMenu()" class="pendel-Button">
+      <div class="pendel"></div>
+      <div class="pendel"></div>
+      <div class="pendel"></div>
+    </button>
+  </div>
 </div>
+
+<div ngClass="{{ hidden }}">
+  <div ngClass="{{mobileHead}}">
+    <span>D<b>e</b>nis</span>
+    <a (click)="closeMenu()">X</a>
+  </div>
+  <div ngClass="{{links}}">
+    <a href="">About me</a>
+    <a href="">Skills</a>
+    <a href="">Portfolio</a>
+    <a href="">Contact</a>
+  </div>
+</div>
+<div ngClass="{{hiddenBg}}"></div>

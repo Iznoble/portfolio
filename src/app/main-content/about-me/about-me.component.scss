@@ -31,3 +31,49 @@
     height: 600px;
   }
 }
+
+@media (max-width: 700px) {
+  .information {
+    padding-top: 100px;
+    height: 570px;
+  }
+}
+
+@media (max-width: 550px) {
+  .personal-pic {
+    > img {
+      width: 400px;
+      height: 500px;
+    }
+  }
+}
+
+@media (max-width: 510px) {
+  .information {
+    width: 400px;
+    >h2 {
+      font-size: 75px;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+
+  .information {
+    width: 300px;
+    height: 750px;
+    padding-top: 50px;
+    >h2 {
+      font-size: 56px;
+    }
+  }
+
+  .personal-pic {
+    height: 600px;
+    width: 490px;
+    > img {
+      width: 300px;
+      height: 400px;
+    }
+  }
+}

@@ -1,18 +1,114 @@
+.head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 span {
-    font-size: 36px;
+  font-size: 36px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+b {
+  color: #00bee8;
 }
 
 .links {
-    width: 324px;
-    display: flex;
-    gap: 29px;
-    >a {
-        text-decoration: none;
-        color: white;
-        font-size: 23px;
-        cursor: pointer;
-        &:hover {
-            color: #00BEE8;
-        }
+  width: 324px;
+  display: flex;
+  gap: 29px;
+  > a {
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    &:hover {
+      color: #00bee8;
     }
+  }
+}
+
+.pendel-Button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.pendel {
+  width: 30px;
+  height: 2px;
+  background-color: #ffff;
+  border-radius: 2px;
+  margin: 14px;
+}
+
+.hiden-content {
+  width: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  > .burger-menu-bg-hidden {
+    height: 0;
+    width: 0;
+  }
+}
+
+.burger-menu {
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  gap: 240px;
+}
+
+.burger-menu-bg {
+  background-color: black;
+  opacity: 0.4;
+  height: 1000px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.mobile-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.mobile-links {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  >a {
+    text-decoration: none;
+    color: #ffff;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .pendel-Button {
+    display: none;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .links {
+    display: none;
+  }
 }

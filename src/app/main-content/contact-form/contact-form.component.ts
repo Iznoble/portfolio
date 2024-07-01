@@ -31,7 +31,7 @@ export class ContactFormComponent {
     message: '',
   };
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://denis-kusmitschev.com/sendMail.php',
@@ -49,7 +49,7 @@ export class ContactFormComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
+            
             ngForm.resetForm();
           },
           error: (error) => {
