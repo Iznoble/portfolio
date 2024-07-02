@@ -49,9 +49,9 @@
     width: 617px;
     height: 30px;
   }
-  >.checkbox {
+  > .checkbox {
     padding: 18px;
-    border-color: #00BEE8;
+    border-color: #00bee8;
   }
   > textarea {
     width: 617px;
@@ -71,21 +71,91 @@
     border-radius: 10px;
     font-size: 23px;
     color: white;
-    background-color: #B6B6B6;
+    background-color: #b6b6b6;
     cursor: pointer;
   }
 }
 
 .playcing {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 .up-btn {
-    height: 46px;
-    width: 46px;
-    padding-top: 16px;
-    padding-right: 100px;
-    padding-bottom: 100px;
-    cursor: pointer;
+  height: 46px;
+  width: 46px;
+  padding-top: 16px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .spacing-contact {
+    flex-direction: column;
+    height: 900px;
+    > .problem-text {
+      width: 100%;
+      > span {
+        margin: 0px 50px;
+      }
+      > p {
+        margin: 20px 50px;
+      }
+      > .headline {
+        > img {
+          width: 45px;
+          margin-right: 5px;
+        }
+      }
+    }
+    > form {
+      margin-right: 0;
+      > input {
+        width: 80%;
+      }
+      > textarea {
+        width: 80%;
+      }
+      > div {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        > .checkbox {
+          height: 30px;
+          width: 30px;
+          margin-right: 12px;
+        }
+      }
+      > button {
+        margin-top: 20px;
+      }
+    }
+  }
+  .playcing {
+    > img {
+      padding-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .spacing-contact {
+    > .problem-text {
+      > span {
+        margin: 0px 50px;
+      }
+      > p {
+        margin: 20px 50px;
+      }
+      > .headline {
+        > h2 {
+          font-size: 21px;
+        }
+      }
+      >span {
+        font-size: 16px;
+      }
+    }
+  }
 }

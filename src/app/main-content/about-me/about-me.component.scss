@@ -37,12 +37,15 @@
     padding-top: 100px;
     height: 570px;
   }
+
+  .personal-pic {
+    width: 100%;
+  }
 }
 
 @media (max-width: 550px) {
   .personal-pic {
     > img {
-      width: 400px;
       height: 500px;
     }
   }
@@ -70,7 +73,6 @@
 
   .personal-pic {
     height: 600px;
-    width: 490px;
     > img {
       width: 300px;
       height: 400px;

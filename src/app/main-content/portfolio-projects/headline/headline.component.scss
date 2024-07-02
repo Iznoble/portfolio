@@ -16,3 +16,33 @@ span {
     margin-left: 50px;
     font-size: 16px;
 }
+
+
+@media (max-width: 700px) {
+    div {
+        >h2 {
+            font-size: 80px;
+        }
+    }
+
+    span {
+        margin-right: 50px;
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    div {
+        >h2 {
+            font-size: 70px;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    div {
+        >h2 {
+            font-size: 60px;
+        }
+    }
+}
