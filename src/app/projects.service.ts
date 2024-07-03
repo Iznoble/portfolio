@@ -6,6 +6,48 @@ import { Injectable } from '@angular/core';
 export class ProjectsService {
   constructor() {}
 
+  skillIcons = [
+    {
+      icon: 'Property 1=JavScript.png',
+      iconText: 'JavaScript',
+    },
+    {
+      icon: 'Property 1=Angular.png',
+      iconText: 'Angular',
+    },
+    {
+      icon: 'Property 1=Typescript.png',
+      iconText: 'Typescript',
+    },
+    {
+      icon: 'Property 1=html.png',
+      iconText: 'HTML',
+    },
+    {
+      icon: 'Property 1=Git.png',
+      iconText: 'Git',
+    },
+    {
+      icon: 'Property 1=Firebase.png',
+      iconText: 'Firebase',
+    },
+    {
+      icon: 'Property 1=css.png',
+      iconText: 'CSS',
+    },
+    {
+      icon: 'Property 1=Scrum.png',
+      iconText: 'Scrum',
+    },
+    {
+      icon: 'Property 1=Api.png',
+      iconText: 'Rest-Api',
+    },
+    {
+      icon: 'Property 1=Matirial.png',
+      iconText: 'Material design',
+    },
+  ];
 
   hoverInfo = [
     {

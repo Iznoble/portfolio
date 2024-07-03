@@ -18,6 +18,17 @@ img {
   z-index: -1;
 }
 
+@media (max-width: 1100px) {
+  img {
+    top: -160px;
+  }
+
+  .spacing-skills {
+    position: relative;
+    top: -190px;
+  }
+}
+
 @media (max-width: 700px) {
   .spacing-me {
     flex-direction: column-reverse;

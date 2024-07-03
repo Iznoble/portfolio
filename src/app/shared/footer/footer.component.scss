@@ -24,18 +24,56 @@
   }
   > span {
     font-size: 40px;
+    cursor: pointer;
+    > b {
+      color: #00bee8;
+    }
   }
 }
 
 .icons {
-    display: flex;
-    justify-content: space-between;
-    width: 174px;
-    height: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 174px;
+  height: 40px;
+  cursor: pointer;
+  > .aktiv-hover {
+    height: 30px;
     cursor: pointer;
-    >img {
-        &:hover{
-            height: 50px;
-        }
+    > img {
+      height: 35px;
+      &:hover {
+        height: 40px;
+      }
     }
+  }
+}
+
+@media (min-width: 700px) {
+  .mobile-imprint {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    > .imprint {
+      align-items: center;
+      margin-top: 0;
+      > a {
+        display: none;
+      }
+    }
+    > .mobile-imprint {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      > a {
+        text-decoration: none;
+        font-size: 24px;
+        color: white;
+      }
+    }
+  }
 }

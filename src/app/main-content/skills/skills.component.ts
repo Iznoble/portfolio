@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ProjectsService } from '../../projects.service';
 
 @Component({
   selector: 'app-skills',
@@ -9,4 +10,16 @@ import { Component } from '@angular/core';
 })
 export class SkillsComponent {
 
+  iconArray = inject(ProjectsService);
+  hoverAnimation = 'mouseAnimation';
+
+  jump(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    target.classList.add('mouseAnimation');
+  }
+
+  removeAnimation(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    target.classList.remove('mouseAnimation');
+  }
 }
