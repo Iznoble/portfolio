@@ -54,7 +54,7 @@ export class ProjectsService {
       coverImg: 'join_cover.png',
       showInfo: false,
       bgImage: 'join.png',
-      gitRepositories: 'https://github.com/Pascalina1985/join774.git',
+      gitRepositories: 'https://github.com/Iznoble/Join.git',
       liveTest: 'https://denis-kusmitschev.com/join774/log-in.html',
       title: 'Join',
       description:

@@ -13,19 +13,48 @@
   </div>
 
   <form class="form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-    <input [(ngModel)]="contactData.name" type="text" name="name" required />
-    <input [(ngModel)]="contactData.email" type="email" name="email" required/>
-    <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" required></textarea>
-    <div>
-      <input class="checkbox" type="checkbox" required/>
-      <label
-        >I've read the <a href="">privacy policy </a>and agree to the processing
-        of my data as outlined.</label
-      >
+    <input
+      #name="ngModel"
+      [(ngModel)]="contactData.name"
+      type="text"
+      name="name"
+      placeholder="Your name"
+      required
+    />
+    <span *ngIf="!name.valid && name.touched" class="red-message">Please enter your Name</span>
+
+    <input
+      #email="ngModel"
+      [(ngModel)]="contactData.email"
+      type="email"
+      name="email"
+      placeholder="Your E-mail"
+      required
+    />
+    <span *ngIf="!email.valid && email.touched" class="red-message">Please enter your E-mail</span>
+
+    <textarea
+      #message="ngModel"
+      [(ngModel)]="contactData.message"
+      name="message"
+      placeholder="Your Message..."
+      required
+    ></textarea>
+    <span *ngIf="!message.valid && message.touched" class="red-message">Please enter your Message</span>
+
+    <div class="checkbox"> 
+        <label class="container">
+            <input type="checkbox" (change)="isChecked()" />
+            I've read the<a href="">privacy policy </a>and agree to the processing of my data as outlined.
+            <span class="checkmark"></span>
+        </label>
     </div>
-    <button>Send message :)</button>
-  </form>
+    <span *ngIf="!checkboxChecked && contactForm.submitted" class="red-message-privat-policy">Please accept the privacy policy</span>
+
+
+    <button type="submit">Send message :)</button>
+</form>
 </div>
 <div class="playcing">
-  <img class="up-btn" src="./../../../assets/img/icons/Go up button.png" />
+  <a href="#head"><img class="up-btn" src="./../../../assets/img/icons/Go up button.png" /></a>
 </div>

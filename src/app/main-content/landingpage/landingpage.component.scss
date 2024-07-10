@@ -29,18 +29,21 @@
     height: 573px;
     z-index: -1;
   }
+
   > .talk-btn {
-    > button {
-      padding: 15px 30px 15px 30px;
-      border-radius: 10px;
-      background-color: #00bee8;
-      font-size: 23px;
-      color: white;
-      margin-top: 50px;
-      cursor: pointer;
-      &:hover {
-        padding: 15px 30px 15px 40px;
-        background-color: #4b47ff;
+    > a {
+      > button {
+        padding: 15px 30px 15px 30px;
+        border-radius: 10px;
+        background-color: #00bee8;
+        font-size: 23px;
+        color: white;
+        margin-top: 50px;
+        cursor: pointer;
+        &:hover {
+          padding: 15px 30px 15px 40px;
+          background-color: #4b47ff;
+        }
       }
     }
   }
@@ -86,7 +89,6 @@
 }
 
 @media (max-width: 1090px) {
- 
   .headline .i-am {
     width: 130px;
     > span {
@@ -198,7 +200,7 @@
     }
   }
 
-  .landingpage .talk-btn {
+  .landingpage .talk-btn a {
     > button {
       margin-top: 0;
       font-size: 16px;
@@ -207,7 +209,6 @@
 }
 
 @media (max-width: 360px) {
-
   .landingpage .left {
     top: 190px;
     left: -80px;

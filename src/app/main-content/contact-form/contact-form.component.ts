@@ -4,14 +4,16 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { ContactHeadlineComponent } from './contact-headline/contact-headline.component';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
   imports: [
     ContactHeadlineComponent,
+    CommonModule,
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
@@ -32,6 +34,7 @@ export class ContactFormComponent {
   };
 
   mailTest = false;
+  checkboxChecked = false;
 
   post = {
     endPoint: 'https://denis-kusmitschev.com/sendMail.php',
@@ -44,8 +47,15 @@ export class ContactFormComponent {
     },
   };
 
+
+  isChecked() {
+    this.checkboxChecked = !this.checkboxChecked;
+    console.log(this.checkboxChecked);
+    
+  }
+
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.checkboxChecked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {

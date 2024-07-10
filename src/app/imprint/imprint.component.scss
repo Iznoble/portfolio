@@ -1,0 +1,10 @@
+div {
+    height: 100vh;
+    font-size: 36px;
+}
+
+@media (max-width: 430px) {
+    div {
+        font-size: 27px;
+    }
+}
