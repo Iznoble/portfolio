@@ -55,7 +55,7 @@ export class ProjectsService {
       showInfo: false,
       bgImage: 'join.png',
       gitRepositories: 'https://github.com/Iznoble/Join.git',
-      liveTest: 'https://denis-kusmitschev.com/join774/log-in.html',
+      liveTest: 'https://denis-kusmitschev.com/Join/log-in.html',
       title: 'Join',
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
