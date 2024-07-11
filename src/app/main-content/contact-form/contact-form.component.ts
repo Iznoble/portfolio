@@ -35,6 +35,7 @@ export class ContactFormComponent {
 
   mailTest = false;
   checkboxChecked = false;
+  formSubmitted: boolean = false;
 
   post = {
     endPoint: 'https://denis-kusmitschev.com/sendMail.php',
@@ -49,18 +50,17 @@ export class ContactFormComponent {
 
 
   isChecked() {
-    this.checkboxChecked = !this.checkboxChecked;
-    console.log(this.checkboxChecked);
-    
+    this.checkboxChecked = !this.checkboxChecked;    
   }
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.checkboxChecked) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
             
             ngForm.resetForm();
+            this.formSubmitted = true;
           },
           error: (error) => {
             console.error(error);
@@ -70,6 +70,7 @@ export class ContactFormComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
       ngForm.resetForm();
+      this.formSubmitted = true;
     }
   }
 }

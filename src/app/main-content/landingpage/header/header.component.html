@@ -23,10 +23,10 @@
     <a (click)="closeMenu()">X</a>
   </div>
   <div ngClass="{{links}}">
-    <a href="#about_me">About me</a>
-    <a href="#skills">Skills</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
+    <a (click)="closeMenu()" href="#about_me">About me</a>
+    <a (click)="closeMenu()" href="#skills">Skills</a>
+    <a (click)="closeMenu()" href="#portfolio">Portfolio</a>
+    <a (click)="closeMenu()" href="#contact">Contact</a>
   </div>
 </div>
 <div ngClass="{{hiddenBg}}"></div>

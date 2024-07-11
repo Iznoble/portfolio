@@ -49,24 +49,31 @@
     padding: 15px 25px 15px 25px;
     width: 617px;
     height: 30px;
+    margin-bottom: 32px;
     &:hover {
       border-color: #00bee8;
     }
     &.ng-invalid.ng-touched {
       border: 1px solid red;
+      margin-bottom: 10px;
     }
   }
 
   > .red-message {
-    margin-right: 60%;
+    margin-right: 55%;
     color: red;
     font-size: 14px;
+    position: relative;
+    top: -13px;
   }
 
   > .red-message-privat-policy {
     margin-right: 40%;
     color: red;
     font-size: 14px;
+    position: relative;
+    top: -16px;
+    left: -24px;
   }
 
   > textarea {
@@ -78,11 +85,13 @@
     color: white;
     border-radius: 10px;
     padding: 15px 25px 15px 25px;
+    margin-bottom: 32px;
     &:hover {
       border-color: #00bee8;
     }
     &.ng-invalid.ng-touched {
       border: 1px solid red;
+      margin-bottom: 10px;
     }
   }
 
@@ -90,12 +99,18 @@
     display: block;
     position: relative;
     padding-left: 35px;
+    margin-left: 50px;
     margin-bottom: 12px;
     font-size: 16px;
+    width: 80%;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    >a {
+      text-decoration: none;
+      color: #4B47FF;
+    }
   }
 
   .container input {
@@ -151,12 +166,25 @@
     border-radius: 10px;
     font-size: 23px;
     color: white;
-    background-color: #00bee8;
     cursor: pointer;
     &:hover {
       width: 263px;
-      height: 68px;
+      height: 58px;
     }
+  }
+
+  .green-message {
+    color: green;
+    font-weight: bold;
+  }
+
+  .disabled-button {
+    background-color: grey;
+    pointer-events: none;
+  }
+  
+  .enabled-button {
+    background-color: #00bee8;
   }
 }
 
@@ -164,8 +192,8 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  >a {
-    >.up-btn {
+  > a {
+    > .up-btn {
       height: 46px;
       width: 46px;
       padding-top: 16px;
@@ -175,7 +203,6 @@
     }
   }
 }
-
 
 @media (max-width: 1300px) {
   .spacing-contact {
@@ -220,9 +247,11 @@
         width: 80%;
       }
       > div {
-        width: 80%;
+        width: 100%;
         display: flex;
         align-items: center;
+        justify-content: center;
+        margin-left: 0;
         > .checkbox {
           height: 30px;
           width: 30px;
@@ -243,6 +272,7 @@
 
 @media (max-width: 460px) {
   .spacing-contact {
+    height: 950px;
     > .problem-text {
       > span {
         margin: 0px 50px;
@@ -257,6 +287,40 @@
       }
       > span {
         font-size: 16px;
+      }
+    }
+  }
+
+  .form {
+    >.checkbox {
+      > .container {
+        margin-left: 0;
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+
+    >.red-message {
+      margin-right: 0;
+    }
+
+    >.red-message-privat-policy {
+      margin-right: 0;
+      left: 0;
+    }
+  }
+
+  .playcing {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 200px;
+    align-items: center;
+    > a {
+      > .up-btn {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 20px;
       }
     }
   }
