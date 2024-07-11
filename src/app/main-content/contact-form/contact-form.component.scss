@@ -107,9 +107,9 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    >a {
+    > a {
       text-decoration: none;
-      color: #4B47FF;
+      color: #4b47ff;
     }
   }
 
@@ -182,7 +182,7 @@
     background-color: grey;
     pointer-events: none;
   }
-  
+
   .enabled-button {
     background-color: #00bee8;
   }
@@ -292,28 +292,25 @@
   }
 
   .form {
-    >.checkbox {
+    > .checkbox {
       > .container {
         margin-left: 0;
-        width: 100%;
+        width: 70%;
         font-size: 14px;
       }
     }
 
-    >.red-message {
+    > .red-message {
       margin-right: 0;
     }
 
-    >.red-message-privat-policy {
+    > .red-message-privat-policy {
       margin-right: 0;
       left: 0;
     }
   }
 
   .playcing {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
     height: 200px;
     align-items: center;
     > a {
